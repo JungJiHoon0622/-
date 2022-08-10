@@ -1,0 +1,12 @@
+package com.Finotek.service;
+
+import java.util.List;
+
+import com.Finotek.vo.ReplyVO;
+
+public interface ReplyService {
+
+	//댓글 조회
+	public List<ReplyVO> readReply(int bno) throws Exception;
+	
+}
