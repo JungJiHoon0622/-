@@ -1,0 +1,5 @@
+package com.Finotek.dao;
+
+public class MemberDAOImpl {
+
+}
