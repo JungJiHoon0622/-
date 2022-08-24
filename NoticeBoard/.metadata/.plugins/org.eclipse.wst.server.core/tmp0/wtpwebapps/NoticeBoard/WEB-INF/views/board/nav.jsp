@@ -6,13 +6,14 @@
 <ul>
 	<li><a href="/board/list">목록</a></li>
 	<li><a href="/board/writeView">글 작성</a></li>
-	<li>
-		<c:if test="${member != null}"><a href="/member/logout">로그아웃</a></c:if>
-		<c:if test="${member == null}"><a href="/">로그인</a></c:if>
-	</li>
+	<li><c:if test="${member == null}"><a href="/">로그인</a></c:if></li>
+	<li><c:if test="${member == null}"><a href="/member/register">회원가입</a></c:if></li>
+	<li><c:if test="${member != null}"><a href="/member/logout">로그아웃</a></c:if></li>
+	<li><c:if test="${member != null}"><a href="/member/memberUpdateView">회원정보수정</a></c:if></li>
+	<li><c:if test="${member != null}"><a href="/member/memberDeleteView">회원탈퇴</a></c:if></li>     
 	<li>
 		<c:if test="${member != null}">
-			<p>${member.userId}님 안녕하세요.</p>
+			<a>${member.userId}님 환영합니다.</a>
 		</c:if>
 	</li>
 </ul>
